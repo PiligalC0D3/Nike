@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    padding: 20px 160px;
+    height: 100vh;
+    background-color: #333;
+    color: azure;
+
+}
+
+.logo {
+    width: 75px;
+}
+
+h4 {
+    font-size: 30px;
+    
+}
+
+h1{
+    font-size: 100px;
+}
+
+p{  
+    font-size: 16px;
+    margin: 40px;
+}
+
+.botao-carrinho{
+    background-color: #a3be52;
+    color: rgb(0, 0, 0);
+    border: 1px solid azure;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+
+.botao-carrinho:hover{
+    background-color: #a3be52;
+    color: azure;
+    border: 1px solid #a3be52;
+    transition: 0.5s;
+}
+
+.imgTenis{
+    width: 800px;
+    transform: rotate(-25deg);
+}

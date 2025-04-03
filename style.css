@@ -54,3 +54,9 @@ p{
     width: 800px;
     transform: rotate(-25deg);
 }
+
+.caixa-principal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

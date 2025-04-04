@@ -18,12 +18,12 @@ body{
 
 body::before{
     content: '';
-    background-color:#090909 ;
+    background-color:#1a1919 ;
     width: 100%;
     height: 120%;
     position: absolute;
     top: 0;
-    left: 600px;
+    left: -600px;
     transform: rotate(-70deg);
 
 }
@@ -37,6 +37,7 @@ body::after{
     font-size: 250px;
     font-weight: bold;
     transform: translate(-50%, -50%);
+    opacity: 0.5;
 }
 
 .logo {
@@ -85,9 +86,43 @@ p{
     justify-content: space-between;
     align-items: center;
     height: 75%;
+    position: relative;
+    z-index: 1;
 }
 
 .caixa-texto{
     max-width: 500px;
 
 }
+
+.caixa-botoes{
+    z-index: 2;
+    position: relative;
+    display: flex;
+    gap: 10px;
+
+
+}
+.botoes{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.botoes:active{
+    opacity: 0.6;
+}
+
+.verde {
+    background: #ccee66;
+}
+
+.azul{
+    background: #58cced;
+}
+
+.rosa{
+    background: #ff9eb5;
+}
+

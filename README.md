@@ -27,7 +27,7 @@ JavaScript puro para manipulação do DOM
 
 Estou animado com os resultados e com a evolução constante nessa jornada no desenvolvimento web!
 
-Confira um pouco do projeto abaixo (ou me chama que te mostro com prazer!).
+Confira um pouco do projeto abaixo (ou me chama que te mostro com prazer!).<br>
 Deploy: https://nikemichel.netlify.app/
 
 #DesenvolvimentoWeb #Frontend #HTML #CSS #JavaScript #Projetos #Nike #UI #UX #Responsividade #DevEmFormação

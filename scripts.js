@@ -13,6 +13,17 @@ function mudarVisual(cor, imagem, botaoClicado) {
     });
 
     botaoClicado.classList.add("ativo");
+
+    tenis.style.transition = 'opacity 0.6s ease';
+    tenis.style.opacity = 0;
+
+setTimeout(() => {
+    tenis.src = imagem;
+
+    tenis.onload = () => {
+        tenis.style.opacity = 1;
+    };
+}, 300);
 }
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -26,3 +37,5 @@ window.addEventListener("DOMContentLoaded", () => {
         }, { once: true });
     });
 });
+
+

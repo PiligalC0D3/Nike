@@ -90,10 +90,11 @@ p{
 .imagem-tenis{
     width: 800px;
     transform: rotate(-25deg);
-    opacity: 0;
+    opacity: 1;
     transform: rotate(-360deg) scale(0.5);
     animation: aparecerTenis 1.2s ease-out forwards;
     animation-delay: 0.8s;
+    transition: opacity 0.6s ease-in-out;
 }
 
 @keyframes aparecerTenis {
@@ -179,7 +180,7 @@ p{
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* Ajuste para telas menores */
     body {
       padding: 20px;
       
@@ -193,12 +194,22 @@ p{
       
     }
   
-    .imagem-tenis {
+    .imagem-tenis {  /* Ajuste a largura da imagem para caber na tela menor */
       width: 100%;
       max-width: 350px;
       transform: rotate(0deg);
+      filter: drop-shadow(30px 40px 40px #161616);
+      animation: aparecerTenis 1.2s ease-out;
+      transition: opacity 0.6s ease-in-out;
+      opacity: 1;
+
     }
-  
+    
+.trocar-efeito{
+    opacity: 0;
+    transform: rotate(-25deg) translateY(-30px);
+}
+
     .caixa-texto {
       max-width: 100%;
       text-align: center;

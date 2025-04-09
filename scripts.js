@@ -4,9 +4,7 @@ let botaoCarrinho = document.querySelector(".botao-carrinho");
 
 function mudarVisual(cor, imagem, botaoClicado) {
     body.style.backgroundColor = cor;
-    tenis.src = imagem;
     botaoCarrinho.style.backgroundColor = cor;
-    
 
     document.querySelectorAll(".botoes-cor").forEach(botao => {
         botao.classList.remove("ativo");
@@ -14,28 +12,35 @@ function mudarVisual(cor, imagem, botaoClicado) {
 
     botaoClicado.classList.add("ativo");
 
-    tenis.style.transition = 'opacity 0.6s ease';
+    // Fade-out
+    tenis.style.transition = 'opacity 0.3s ease';
     tenis.style.opacity = 0;
 
-setTimeout(() => {
-    tenis.src = imagem;
+    // Cria uma imagem temporária para garantir que a nova já esteja carregada
+    const novaImagem = new Image();
+    novaImagem.src = imagem;
 
-    tenis.onload = () => {
-        tenis.style.opacity = 1;
+    novaImagem.onload = () => {
+        // Quando a imagem estiver carregada, troca e faz o fade-in
+        tenis.src = imagem;
+
+        
+        // Dá um pequeno tempo só para garantir a troca visual antes do fade-in
+        requestAnimationFrame(() => {
+            tenis.style.transition = 'opacity 0.3s ease';
+            tenis.style.opacity = 1;
+            
+        });
     };
-}, 300);
 }
 
 window.addEventListener("DOMContentLoaded", () => {
     const audio = new Audio("assets/entrada.wav");
-    audio.volume = 0.3; // volume mais suave
-    audio.play().catch((e) => {
-        // Alguns navegadores bloqueiam autoplay, especialmente sem interação do usuário
+    audio.volume = 0.3;
+    audio.play().catch(() => {
         console.log("Autoplay bloqueado. Som será tocado após primeira interação.");
         document.body.addEventListener("click", () => {
             audio.play();
         }, { once: true });
     });
 });
-
-

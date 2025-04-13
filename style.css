@@ -95,6 +95,8 @@ p{
     animation: aparecerTenis 1.2s ease-out forwards;
     animation-delay: 0.8s;
     transition: opacity 0.3s ease;
+    filter: drop-shadow(30px 40px 40px rgba(0, 0, 0, 0.7));
+
 }
 
 @keyframes aparecerTenis {
